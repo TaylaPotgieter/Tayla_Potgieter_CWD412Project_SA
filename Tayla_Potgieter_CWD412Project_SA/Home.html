@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="Shared/css/Styles.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/css/home-style.css">
+
+    <!-- Custom Styles -->
+    <style>
+        /* styling for images next to paragraphs */
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            float: none; /* Ensure images are centered on smaller screens */
+        }
+
+        /* Styling for paragraphs and images in the about section */
+        #about {
+            overflow: hidden;
+            padding: 20px; /* Add padding to improve readability on smaller screens */
+        }
+
+        .about-content {
+            display: flex;
+            margin-bottom: 20px;
+            flex-direction: column; /* Stack elements vertically on smaller screens */
+        }
+
+        .about-text,
+        .about-image {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #34495ece; /* Another dark blue shade */
+            color: #ecf0f1; /* Light text color for contrast */
+            padding: 10px 0;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* Add your responsive styles here */
+            body {
+                font-size: 14px;
+            }
+
+            /* Example: Adjust styles for smaller screens */
+            #home,
+            #about {
+                padding: 20px;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-image img,
+            .about-image-right img {
+                float: none;
+                max-width: 100%;
+            }
+        }
+    </style>
+
+    <!-- External JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script defer src="Shared/js/shared.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Projectspage/Projects.html">Projects</a></li>
+                <li><a href="Skillspage/Skills.html">Skills</a></li>
+                <li><a href="Experiencepage/Experience.html">Experience</a></li>
+                <li><a href="Contactpage/Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to My Professional Portfolio!</h1>
+            <p>This is the home section of my website where you can learn more about me.</p>
+            <p>Feel free to explore my portfolio and learn more about my skills, projects, and professional journey.</p>
+            <p>Thank you for visiting!</p>
+            <a href="Projectspage/Projects.html" class="cta-button">Explore My Projects</a>
+
+            <!-- Heading outside the carousel -->
+            <h2>Featured Skills</h2>
+
+            <!-- Slick Carousel -->
+            <div id="skills-carousel">
+                <div class="skill-slide">SQL</div>
+                <div class="skill-slide">Python</div>
+                <div class="skill-slide">Web Development</div>
+                <div class="skill-slide">Ethics</div>
+                <div class="skill-slide">Network Architecture</div>
+                <div class="skill-slide">Cloud Fundamentals</div>
+                <div class="skill-slide">Computer Architecture</div>
+                <div class="skill-slide">Robotic Development</div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello there! I'm Tayla Potgieter, a versatile individual passionate about a wide range of skills and interests. Proficient in SQL, I can navigate databases with ease, ensuring efficient data management. My expertise extends to Computer Architecture, where I understand the intricacies of how hardware and software interact.</p>
+
+                    <p>Python is another tool in my arsenal, allowing me to automate tasks and develop diverse applications. As a user of Office 365, I'm well-versed in its applications, enhancing productivity and collaboration.</p>
+                    <p>In web development, I possess core skills that contribute to crafting engaging and functional websites. Additionally, my knowledge extends to Robotics Development, where I explore the intersection of technology and automation.</p>
+
+                </div>
+
+                <div class="about-image">
+                    <img src="pictures/coding-symbol.jpg" alt="coding symbol on a virtual screen">
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>My Cloud Fundamentals round out my skill set, enabling me to harness the power of cloud computing for scalable solutions.</p>
+                    <p>Beyond the tech world, I enjoy building puzzles and model kits and expressing my creativity through drawing. I have an insatiable appetite for learning, always seeking out new knowledge and staying at the forefront of technological advancements.</p>
+                    <p>In essence, I am a dynamic individual with a meticulous eye for detail, an unwavering love for problem-solving, and an insatiable passion for technology. I am not only excited about continuing to explore my passions but also harbor a genuine enthusiasm for expanding my skills and knowledge. I am excited to continue exploring my interests and delving into a myriad of diverse interests. The ever-evolving landscape of technology inspires me, and I eagerly anticipate the endless possibilities it holds for both personal and professional growth.</p>
+                </div>
+
+                <div class="about-image about-image-right">
+                    <img src="pictures/development-branching.jpg" alt="development branching process">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tayla Potgieter. All rights reserved.</p>
+    </footer>
+
+    <!-- Slick Carousel JavaScript -->
+    <script>
+        // Initialize Slick Carousel for the skills carousel
+        $(document).ready(function () {
+            $('#skills-carousel').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+                centerMode: true,
+                focusOnSelect: true,
+                variableWidth: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            centerMode: false,
+                            variableWidth: false,
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+
+            // Fix for the slick carousel bug causing a gap
+            setTimeout(function () {
+                $('#skills-carousel').slick('setPosition');
+            }, 0);
+        });
+    </script>
+</body>
+
+</html>
