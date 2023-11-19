@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/Shared/css/Styles.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ecf0f1; /* Light gray background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .section-heading {
+            color: #3498db;
+            margin-top: 20px;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        footer {
+            background-color: #34495ece; /* Another dark blue shade */
+            color: #ecf0f1; /* Light text color for contrast */
+            padding: 10px 0;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <script defer src="/Shared/js/shared.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/Home.html">Home</a></li>
+                <li><a href="/Projectspage/Projects.html">Projects</a></li>
+                <li><a href="/Skillspage/Skills.html">Skills</a></li>
+                <li><a href="/Experiencepage/Experience.html">Experience</a></li>
+                <li><a href="/Contactpage/Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Feel free to reach out to me through the contact form or using the provided email and social media links.</p>
+
+            <!-- Contact Form -->
+            <form id="contact-form" action="./php/Process_form.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section class="social-links">
+            <h2 class="section-heading">Connect with Me</h2>
+
+            <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer">Email</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tayla Potgieter. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // You can use JavaScript to handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            submitForm(); // Call your function to handle the form submission
+        });
+
+        function submitForm() {
+            // Add code here to handle form submission (e.g., send data to server)
+            // You may use AJAX or fetch to send data to the server
+            alert('Form submitted!');
+        }
+    </script>
+</body>
+
+</html>

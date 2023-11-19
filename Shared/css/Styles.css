@@ -1,0 +1,144 @@
+/* Navigation */
+header {
+    background-color: #333;
+}
+
+nav {
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: right;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Body and main content */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a.active {
+    background-color: #555;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3498db; /* Blue color */
+    color: #fff; /* White text color */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2c3e50; /* Darker blue on hover */
+}
+
+/* Add the new styles for color */
+/* Header */
+header {
+    background-color: #2c3e50; /* Dark blue */
+}
+
+/* Footer */
+footer {
+    background-color: #34495e; /* Another dark blue shade */
+    color: #ecf0f1; /* Light text color for contrast */
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #e74c3c; /* Red color */
+    color: #fff; /* White text color */
+}
+
+.cta-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Navigation */
+nav {
+    background-color: #3498db; /* Blue color */
+}
+
+nav a {
+    color: #fff; /* White text color */
+}
+
+nav a:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff; /* White background for main content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2 {
+    color: #2c3e50; /* Dark blue for main headings */
+}
+
+/* Paragraphs */
+p {
+    color: #333; /* Dark gray text color for paragraphs */
+}
+
+/* About Me Section Background */
+#about {
+    background-color: #ecf0f1; /* Light gray background for the About Me section */
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #34495e; /* Another dark blue shade for the footer */
+    color: #ecf0f1; /* Light text color for contrast */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    main {
+        padding: 10px;
+    }
+
+
+}
